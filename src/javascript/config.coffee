@@ -3,6 +3,8 @@ LayoutManager = require 'backbone.layoutmanager'
 router = require './router'
 controllers= require './controllersConfig'
 
+
+
 # requireDir = require 'require-dir'
 #
 # templates = requireDir('../templates/', {
@@ -10,13 +12,9 @@ controllers= require './controllersConfig'
 # })
 
 fs = require 'fs'
-templates={}
+templates=require('../templates/**/*.hbs', {mode: 'hash'})
 #this is possible on browserify thanks to https://github.com/substack/brfs
-fs.readdirSync(__dirname + '/../templates').forEach (file) ->
-  if file.match(/\.js$/) != null and file != 'index.js'
-    name = file.replace('.js', '')
-    templates[name] = require('./' + file)
-  return
+
 
 
 router.setController controller for controller in controllers

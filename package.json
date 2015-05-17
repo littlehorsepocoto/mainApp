@@ -23,7 +23,7 @@
       "browserify-shim",
       "coffeeify",
       "hbsfy",
-      "brfs"
+      "require-globify"
     ]
   },
   "coffeelintConfig": {
@@ -55,7 +55,7 @@
     "lodash": "^3.8.0"
   },
   "devDependencies": {
-    "brfs": "^1.4.0",
+
     "browser-sync": "~2.2.2",
     "browserify": "^9.0.3",
     "browserify-shim": "^3.8.2",
@@ -88,6 +88,7 @@
     "merge-stream": "^0.1.7",
     "pretty-hrtime": "~1.0.0",
     "require-dir": "^0.1.0",
+    "require-globify": "^1.2.0",
     "vinyl-source-stream": "~1.0.0",
     "watchify": "^2.4.0"
   }
