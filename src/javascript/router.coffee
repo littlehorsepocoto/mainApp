@@ -28,7 +28,7 @@ Router = Backbone.Router.extend(
     return
   index: ->
 
-    #@navigate 'index', trigger: true
+    @navigate 'index', trigger: true
     return
 )
 # Define your master router on the application namespace and trigger all
