@@ -1,6 +1,6 @@
 Backbone = require 'backbone'
 LayoutManager = require 'backbone.layoutmanager'
-mainTemplate = require '../templates/main'
+
 
 routeFunction = (controllerName, params...) ->
   if controllerName.indexOf('?') > -1
@@ -16,14 +16,10 @@ Router = Backbone.Router.extend(
     '': 'index'
     '/': 'index'
   controllers: {}
-  setController: (name, controller) ->
-    @controllers[name] = controller
+  setController: (controller) ->
+    @controllers[controller.route] = controller
     return
   initialize: (options) ->
-    main = new (Backbone.Layout)(
-      el: '#main'
-      template: mainTemplate)
-    
     @routeFunction = routeFunction
     @route ':controllerName', 'routeFunction'
     @route ':controllerName/:param', 'routeFunction'
@@ -31,7 +27,8 @@ Router = Backbone.Router.extend(
 
     return
   index: ->
-    @navigate 'villas', trigger: true
+
+    #@navigate 'index', trigger: true
     return
 )
 # Define your master router on the application namespace and trigger all

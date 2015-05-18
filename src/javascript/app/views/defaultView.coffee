@@ -1,18 +1,15 @@
-Backbone = require 'Backbone'
+Backbone = require 'backbone'
+_ = require 'lodash'
 
 DefaultView =  Backbone.View.extend(
-  template: 'amenity/main'
+  template: 'default'
+  
   serialize: ->
     this
   initialize: ->
     _.bindAll this
     return
-  afterRender: ->
-    that = this
-    @model.forEach (group) ->
-      amenityGroupItemView = new AmenityGroupItemView(model: group)
-      that.insertView('#groups', amenityGroupItemView).render()
-      return
-    return
+
+
 )
 module.exports=DefaultView
