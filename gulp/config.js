@@ -1,3 +1,7 @@
+historyApiFallback = require('connect-history-api-fallback')
+
+
+
 var dest = "./dist";
 var src = './src';
 
@@ -5,7 +9,8 @@ module.exports = {
   browserSync: {
     server: {
       // Serve up our build folder
-      baseDir: dest
+      baseDir: dest,
+      middleware: [historyApiFallback()]
     }
   },
   sass: {
