@@ -52,7 +52,8 @@
     "baconjs": "^0.7.58",
     "google-maps": "^2.1.1",
     "jquery": "^2.1.4",
-    "lodash": "^3.8.0"
+    "lodash": "^3.8.0",
+    "query-string": "^2.1.0"
   },
   "devDependencies": {
     "browser-sync": "~2.2.2",

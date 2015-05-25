@@ -8,7 +8,7 @@ class MainController extends Controller
     defaultView = new DefaultView
     
     @main.insertView("#content",defaultView).render()
-    window.console.log('bla ')
+    
     return
 
 

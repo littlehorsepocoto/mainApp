@@ -1,4 +1,5 @@
 MainController = require './app/mainController'
-controllers=[new MainController('index') ]
+LoggedController = require './app/autorizeResponseController'
+controllers=[new MainController('index'), new LoggedController('authorize'),]
 
 module.exports=controllers
